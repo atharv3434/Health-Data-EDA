@@ -11,6 +11,7 @@ and must not be treated as medical fact.
 
 Usage:
     python data/generate_data.py [--n 500] [--seed 42] [--out data/patient_health_data.csv]
+    
 """
 
 import argparse
