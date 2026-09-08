@@ -1,10 +1,12 @@
-"""Core exploratory data analysis functions: summary stats, missing-value
+"""
+Core exploratory data analysis functions: summary stats, missing-value
 reporting, distribution/correlation plots, outlier detection, and simple
 group comparisons with a t-test.
 
 Every function returns plain data (DataFrames, dicts) rather than printing
 directly, so generate_report.py can both display results and write them
 into the markdown report.
+
 """
 
 import os
