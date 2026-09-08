@@ -1,7 +1,9 @@
-"""Run the full EDA and generate a markdown report with embedded figures.
+"""
+Run the full EDA and generate a markdown report with embedded figures.
 
 Usage:
     python src/generate_report.py [--config config.yaml]
+
 """
 
 import argparse
