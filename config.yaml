@@ -1,0 +1,38 @@
+# Configuration for the health data EDA project.
+
+data_path: data/patient_health_data.csv
+output_dir: output
+figures_dir: output/figures
+report_path: output/eda_report.md
+
+# Columns treated as numeric for distributions, correlation, and outlier analysis
+numeric_columns:
+  - age
+  - bmi
+  - exercise_hours_per_week
+  - systolic_bp
+  - diastolic_bp
+  - cholesterol
+  - glucose
+
+# Columns treated as categorical for count plots
+categorical_columns:
+  - sex
+  - smoker
+  - hypertension
+
+# Group comparisons: for each entry, compare `value_col` between the two
+# groups of `group_col` (must be a binary categorical column) and run a
+# two-sample t-test.
+group_comparisons:
+  - group_col: smoker
+    value_col: systolic_bp
+  - group_col: smoker
+    value_col: cholesterol
+  - group_col: hypertension
+    value_col: bmi
+  - group_col: hypertension
+    value_col: age
+
+# IQR multiplier used for the outlier summary
+iqr_multiplier: 1.5
